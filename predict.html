@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Online calculator for predicting mortality</title>
+    <style>
+      #boxes {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      div {
+        float: left;
+        height: 470px;
+        width: 23%;
+        padding: 0 10px;
+      }
+      #column1 {
+        background-color: #58949C;
+        width: 32%;
+      }
+      #column2 {
+        background-color: #F2D7B4;
+        width: 32%;
+      }
+      #column3 {
+        background-color: #DF9881;
+        width: 31%;
+      }
+      h1 {
+        color: #000000;
+        text-align: center;
+      }
+      h2 {
+        color: #000000;
+        text-align: center;
+      }
+      h3 {
+        color: #000000;
+        text-align: center;
+      }
+
+/* Full-width input fields */
+      input[type=number]{
+        width: 80%;
+        /* padding: 15px; */
+        margin: 5px 0 10px 0;
+        /* margin: 5px 0 22px 0; */
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        margin-left: 20px;
+        text-align:left;
+      }
+
+
+       input[type="radio"] {
+        display: inline-block;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      label {
+        /* Other styling... */
+        display: inline-block;
+        text-align: right;
+        clear: both;
+        margin-right:15px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <main id="boxes">
+      <h1>Predicting mortality</h1>
+      <h2> Please fill in the patient's information to predict the probability of mortality.</h2>
+      <div id="column1">
+        <h2>Patient information</h2>
+
+
+        <label for="age"><b>Age (years):</b></label>
+        <input type="number" placeholder="Enter Age" name="age" required>
+
+        <label for="gender"><b>Gender:</b></label>
+        <input type="radio" id="male" name="gender" value="male">
+    	  <label for="male">Male</label>
+    	  <input type="radio" id="female" name="gender" value="female">
+    	  <label for="female">Female</label></br>
+
+      </div>
+      <div id="column2">
+        <h2>Clinical information</h2>
+
+        <label for="bicarb"><b>Enter Bicarbonate level (mmol/L):</b></label>
+        <input type="number" placeholder="Enter bicarbonate" name="Bicarbonate" required>
+        <label for="glucose"><b>Enter Glucose level (mg/dl):</b></label>
+        <input type="number" placeholder="Enter glucose" name="Glucose" required>
+        <label for="age"><b>Enter Albumin level(g/dl):</b></label>
+        <input type="number" placeholder="Enter Albumin" name="Albumin" required>
+        <label for="age"><b>Enter Mean airway pressure (cmH<sub>2</sub>O):</b></label>
+        <input type="number" placeholder="Enter Mean airway pressure" name="Mean airway pressure" required>
+        <label for="age"><b>Enter Heart rate (bpm):</b></label>
+        <input type="number" placeholder="Enter Heart rate" name="Heart rate" required>
+        <label for="age"><b>Enter Platelet count (10<sup>9</sup>/L):</b></label>
+        <input type="number" placeholder="Enter Platelet count" name="Platelet count" required>
+
+        <label for="pneumonia"><b>Pneumonia:</b></label>
+        <input type="radio" id="yes" name="pneumonia" value="yes">
+        <label for="male">Yes</label>
+        <input type="radio" id="no" name="pneumonia" value="no">
+        <label for="female">No</label></br>
+
+        <input type="submit" value="Make prediction">
+
+      </div>
+      <div id="column3">
+        <h2>Prediction</h2>
+        Show the results...Work in progress
+      </div>
+    </main>
+  </body>
+</html>
